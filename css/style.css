@@ -73,3 +73,43 @@
     color: white;
   }
 
+/* milestones */
+.milestones
+{
+	width: 100%;
+	background: #FFFFFF;
+	padding-top: 115px;
+	padding-bottom: 115px;
+}
+.milestone
+{
+	width: 100%;
+}
+.milestone_icon
+{
+	display: inline-block;
+	height: 82px;
+	width: 82px;
+}
+.milestone_icon img
+{
+	max-width: 100%;
+}
+.milestone_counter
+{
+	font-family: 'Oswald', sans-serif;
+	font-size: 60px;
+	font-weight: 500;
+	color: #181818;
+	line-height: 0.75;
+	margin-top: 35px;
+}
+.milestone_text
+{
+	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	color: #838383;
+	margin-top: 31px;
+	line-height: 0.75;
+}
