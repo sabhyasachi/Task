@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,800|Ibarra+Real+Nova:400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,600,700,800|Ibarra+Real+Nova:400,500,600,700");
 
 .container {
   padding-right: 15px;
@@ -45,7 +45,6 @@
   background: #333339;
   display: flex;
   justify-content: center;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .topnav a {
@@ -61,7 +60,10 @@
 
 .topnav a.active {
   background: var(--primary);
+  font-weight: bold;
+  color: #333339;
   border-color: var(--primary);
+  box-shadow: 0 1px 3px 0 #000;
 }
 
 .topnav a:hover {
@@ -82,11 +84,17 @@ a.link:hover {
   box-sizing: border-box;
   outline: none;
   -webkit-tap-highlight-color: transparent;
+  line-height: 1.4em !important;
 }
 
 :root {
-  font-family: "Ibarra Real Nova", serif;
-  --primary: #3c53b5;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  --primary: #6478cd;
+}
+
+body {
+  background: #222228;
 }
 
 .image {
@@ -95,7 +103,7 @@ a.link:hover {
   border-radius: 50%;
   overflow: hidden;
   text-align: center;
-  margin: 0 15%;
+  margin: 0 25%;
 }
 
 .image img {
@@ -110,6 +118,7 @@ a.link:hover {
 .title-info {
   display: grid;
   grid-template-columns: auto auto;
+  margin: 20px;
   column-gap: 10px;
 }
 
@@ -124,6 +133,39 @@ a.link:hover {
 }
 
 .title-info > div:nth-child(odd) > i {
-  width: 2em;
+  width: 1.5em;
   text-align: center;
+}
+
+strong {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.17em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+.div-highlight {
+  background: #0004;
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px 20px;
+}
+
+.text-highlight {
+  color: var(--primary);
+  font-weight: bold;
 }
