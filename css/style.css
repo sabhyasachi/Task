@@ -1,7 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
 
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,600,700,800|Ibarra+Real+Nova:400,500,600,700");
+/* Load Sora from Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Sora:300,400,600,700,800");
 
 .container {
   padding-right: 15px;
@@ -16,7 +17,7 @@
   padding: 0.25rem 0.75rem;
 }
 
-/* nav bar */
+/* Navbar with centered tabs. */
 .topnav {
   background: #333339;
   display: flex;
@@ -53,24 +54,26 @@ a.link {
 a.link:link {
   color: #ff0000;
 }
+
 a.link:visited {
   color: #0000ff;
 }
+
 a.link:hover {
   color: #ffcc00;
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Measurement of each element's size should include its borders. */
   outline: none;
   -webkit-tap-highlight-color: transparent;
   line-height: 1.4em !important;
 }
 
 :root {
-  font-family: "Lato", sans-serif;
+  font-family: "Sora", sans-serif;
   color: white;
-  --primary: #6478cd;
+  --primary: #6478cd; /* Primary accent color as a reusable CSS variable */
 }
 
 body {
@@ -86,6 +89,7 @@ body {
   margin: 0 25%;
 }
 
+/* A round profile picture with a padded border and square aspect. */
 .image img {
   width: 80%;
   aspect-ratio: 1;
@@ -102,10 +106,12 @@ body {
   column-gap: 10px;
 }
 
+/* Align information into about-center w.r.t. the icons. */
 .title-info > div:nth-child(even) {
   transform: translateY(8px);
 }
 
+/* Align info icons to the right. */
 .title-info > div:nth-child(odd) {
   text-align: right;
   color: var(--primary);
@@ -116,6 +122,8 @@ body {
   width: 1.5em;
   text-align: center;
 }
+
+/* Redefine `strong` and headings after the reset caused by reset.css */
 
 strong {
   font-weight: bold;
@@ -141,6 +149,8 @@ h5,
 h6 {
   font-weight: bold;
 }
+
+/* Darker background for highlighted `div`s and cards. */
 
 .div-highlight,
 .card {
@@ -173,41 +183,49 @@ h6 {
   border-top: 2px dashed #fff;
 }
 
-/* 2 columns (1000px) */
+.gallery {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 20px;
+  margin: 20px;
+}
+
+.gallery-card {
+  background: #0004;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  transition: all 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.15);
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
 
 @media only screen and (max-width: 1000px) {
+  /* Flatten the container grid for screen widths below 1000px. */
   .container {
     display: block;
   }
 }
 
-/* Favorite card-grid flattens at <550px */
-
 @media only screen and (max-width: 550px) {
+  /* Favorites card-grid flattens at below 550px of screen width. */
   .card-grid {
     display: block;
   }
-}
 
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float:left;
-  margin-left: 10%;
-  margin-top: 5%;
-  width: 180px;
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
+  /* Gallery reshapes into 2x2 grid. */
+  .gallery {
+    grid-template-columns: auto auto;
+  }
 }
