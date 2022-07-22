@@ -6,8 +6,7 @@
 .container {
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 30px auto;
 }
 
 @media (min-width: 768px) {
@@ -46,6 +45,7 @@
   background: #333339;
   display: flex;
   justify-content: center;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .topnav a {
@@ -56,16 +56,16 @@
   margin: 10px 5px;
   border-radius: 5px;
   border: 2px solid transparent;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .topnav a.active {
-  background: #3c53b5;
-  border-color: #3c53b5;
+  background: var(--primary);
+  border-color: var(--primary);
 }
 
 .topnav a:hover {
-  border-color: #3c53b5;
+  border-color: var(--primary);
 }
 
 a.link:link {
@@ -85,5 +85,45 @@ a.link:hover {
 }
 
 :root {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Ibarra Real Nova", serif;
+  --primary: #3c53b5;
+}
+
+.image {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 15%;
+}
+
+.image img {
+  width: 80%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 3px solid var(--primary);
+  padding: 2px;
+  box-shadow: 2px 2px 2px 2px #3334;
+}
+
+.title-info {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 10px;
+}
+
+.title-info > div:nth-child(even) {
+  transform: translateY(8px);
+}
+
+.title-info > div:nth-child(odd) {
+  text-align: right;
+  color: var(--primary);
+  padding: 5px;
+}
+
+.title-info > div:nth-child(odd) > i {
+  width: 2em;
+  text-align: center;
 }
