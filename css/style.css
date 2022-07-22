@@ -142,3 +142,6 @@
 	max-width: 60%;
 }
 
+a.link  :link {color:#ff0000;}
+a.link  :visited {color:#0000ff;}
+a.link  :hover {color:#ffcc00;}
