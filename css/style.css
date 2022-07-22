@@ -192,7 +192,9 @@ h6 {
 div.gallery {
   margin: 5px;
   border: 1px solid #ccc;
-  float: left;
+  float:left;
+  margin-left: 10%;
+  margin-top: 5%;
   width: 180px;
 }
 
